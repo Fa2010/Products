@@ -31,7 +31,7 @@ class Module implements ModuleDefinitionInterface
             [
                 'Modules\Showcase\Products\Controllers' => MODULE_PATH.'Showcase/Products/Controllers',
                 'Modules\Showcase\Products\Forms' => MODULE_PATH.'Showcase/Products/Forms',
-                'Modules\Showcase\Products\Model' => MODULE_PATH.'Showcase/Products/Model',
+                'Modules\Showcase\Products\Models' => MODULE_PATH.'Showcase/Products/Models',
             ]
 
         )->register();
@@ -63,7 +63,6 @@ class Module implements ModuleDefinitionInterface
         $view->setViewsDir(__DIR__. '/views/');
         $view->setLayoutsDir(__DIR__. '/layouts/');
         $view->setLayout('main');
-        $view->setPartialsDir(__DIR__. '/partials/');
         return $view;
     }
 }

@@ -20,27 +20,39 @@ class ProductsCategory extends Model
 
     public function initialize()
     {
+        $this->belongsTo(
+            'lang_id',
+            'Ilya\Models\Lang',
+            'id',
+            [
+                'alias' => 'Lang'
+            ]
+        );
        $this->hasMany(
             'id',
             'Modules\Showcase\Products\Models\ProductsCategoryMap',
             'products_category_id'
 
         );
-
         $this->belongsTo(
             'id',
             'Modules\Showcase\Products\Models\ProductsCategory',
-            'parent_id'
+            'parent_id',
+            [
+                'alias' => 'Parent'
+            ]
 
         );
-
         $this->hasMany(
             'parent_id',
             'Modules\Showcase\Products\Models\ProductsCategory',
             'id'
 
         );
-
-
     }
+    public function getSource ()
+    {
+        return 'ilya_products_category';
+    }
+
 }

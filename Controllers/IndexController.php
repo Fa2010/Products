@@ -8,13 +8,15 @@
 
 namespace Modules\Showcase\Products\Controllers ;
 
+use Phalcon\Mvc\Controller;
 use Phalcon\Mvc\View;
 
-class IndexController extends \Lib\Mvc\Controller
+class IndexController extends Controller
 {
     public function indexAction()
     {
-//     $this->view->setRenderLevel(View::LEVEL_ACTION_VIEW);
+
+   $this->view->setRenderLevel(View::LEVEL_ACTION_VIEW);
     }
 
 }

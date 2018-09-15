@@ -15,6 +15,7 @@ class Products extends Model
     public $id;
     public $title;
     public $description;
+    public $products_category_id ;
 
     public function initialize()
     {
@@ -32,8 +33,10 @@ class Products extends Model
             'id'
 
         );
-
-
+    }
+    public function getSource ()
+    {
+        return 'ilya_products';
     }
 
 }

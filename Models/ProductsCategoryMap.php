@@ -19,6 +19,8 @@ class ProductsCategoryMap extends Model
 
     public function initialize()
     {
+
+
         $this->belongsTo(
             'products_category_id',
             'Modules\Showcase\Products\Models\ProductsCategory',
@@ -37,5 +39,9 @@ class ProductsCategoryMap extends Model
             ]
 
         );
+    }
+    public function getSource ()
+    {
+        return 'ilya_products_category_map';
     }
 }
